@@ -143,6 +143,7 @@ body {
     width: 18px;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 .delete-button:hover {
