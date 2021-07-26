@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+ 
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #FAFAFA;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggletheme-button {
+    background-image: url(../images/icon-moon.svg);
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    align-self: center;
+    cursor: pointer
+}
+
+.toggletheme-button_dark {
+    background-image: url(../images/icon-sun.svg);
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+.header__title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 15px;
+}
+
+.form-container{
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.input-field {
+    font-size: 18px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    margin: 48px auto 0 auto;
+    padding: 22px 24px 20px 24px;
+}
+
+.todo-list__section {
+    background-color: white;
+    max-width: 540px;
+    box-shadow: 2px 2px 20px rgba(197 195 195);
+    margin: -115px auto 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.todo-list__item {
+    display: flex;
+    border-bottom: 1px solid #E3E4F1;
+    padding: 20px 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list__controls {
+    display: flex;
+    padding: 16px 24px 16px 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list__checkbox {
+    display: block;
+}
+
+.todo-list__content {
+    display: flex;
+}
+
+.todo-list__text {
+    color: #494C6B;
+    margin: 0 0 0 24px;
+    font-size: 18px;
+    line-height: 18px;
+    align-self: flex-end;
+}
+
+.button__clear{
+    color: #9495A5;
+    font-size: 14px;
+    line-height: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.button__clear:hover, .button__filter:hover {
+    color: #494C6B;
+}
+
+.items-left {
+    color: #9495A5;
+    font-size: 14px;
+    margin: 0;
+}
+
+.button__filter {
+    color: #9495A5;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.button__filter_clicked {
+    color: #3A7CFD;
+}
+
+.delete-button {
+    background-image: url(../images/icon-cross.svg);
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    opacity: 0.4;
+}
+
+.todo-list__checkbox {
+    height: 24px;
+    width: 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #E3E4F1;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.todo-list__checkbox:hover {
+    border: 1px solid violet;
+}
+
+.todo-list__checkbox:checked {
+    content: url(../images/icon-check.svg);
+    padding: 4px;
+    background: linear-gradient(hsl(192, 100%, 67%) ,hsl(280, 87%, 65%));
+}
+
+.todo-list__checkbox:checked~.todo-list__text {
+    text-decoration: line-through;
+    color: #D1D2DA;
+}
+
+body.dark-theme {
+    background-color: #171823;
+}
+
+body.dark-theme .header {
+    background-image: url(../images/bg-desktop-dark.jpg);
+}
+
+body.dark-theme .todo-list__section {
+    box-shadow: none;
+    background-color: #25273D;
+}
+
+body.dark-theme .todo-list__item {
+    border-bottom: 1px solid #393A4B;
+}
+
+body.dark-theme .todo-list__text {
+    color: #C8CBE7;
+}
+
+body.dark-theme .todo-list__checkbox:checked~.todo-list__text {
+    color: #4D5067;
+}
+
+body.dark-theme .input-field {
+    background-color: #25273D;
+    color: #C8CBE7;
+}
+
+body.dark-theme .todo-list__checkbox {
+    border: 1px solid #393A4B; 
+}
+
+body.dark-theme .todo-list__checkbox:hover {
+    border: 1px solid violet;
+}
+
+@media screen and (max-width: 640px) {
+    .header__wrapper, .todo-list__form, .todo-list__section {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .input-field {
+        font-size: 12px; 
+    }
+
+    .todo-list__item {
+        padding: 16px;
+    }
+
+    .todo-list__text {
+        font-size: 12px;
+    }
+
+    .delete-button {
+        width: 12px;
+        height: 12px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  
+</head>
+<body>
+<header class="header">
+  <div class="form-container">
+    <div class="header__wrapper">
+      <h1 class="header__title">TODO</h1>
+      <button class="toggletheme-button"></button>
+  </div>
+    <form class="todo-list__form" autocomplete="off">
+      <div class="input-container">
+        <label>
+          <input type="text" class="input-field" placeholder="Create a new todo..." id="title">
+        </label>
+      </div>
+    </form>
+  </div>
+</header>
+<section class="todo-list__section">
+  <div class="todo-list__container">
+    <!-- Container where all to do list items are loaded -->
+  </div>
+<!--- <div class="todo-list__controls">
+      <p class="items-left"><span class="items-counter"></span> items left</p>
+      <div class="todo-list__filters">
+        <button class="button__filter button__filter_all button__filter_clicked">All</button>
+        <button class="button__filter button__filter_active">Active</button>
+        <button class="button__filter button__filter_completed">Completed</button>
+      </div>
+      <button class="button__clear">Clear Completed</button>
+    </div> -->
+  </section> 
+  </div>
+</div>
+
+<template id="list-item-template"> 
+  <div class="todo-list__item">
+    <div class="todo-list__content">
+      <input class="todo-list__checkbox" type="checkbox">
+      <p class="todo-list__text"></p>
+    </div>
+    <button class="delete-button"></button>
+  </div>
+</template> 
+
+<script src="script.js"></script>
+</body>
+</html>
