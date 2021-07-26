@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
- 
+
 body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: #FAFAFA;
@@ -12,11 +12,12 @@ body {
 
 .toggletheme-button {
     background-image: url(../images/icon-moon.svg);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 26px;
     height: 26px;
-    background-color: transparent;
     border: none;
-    background-size: contain;
     align-self: center;
     cursor: pointer
 }
@@ -42,7 +43,7 @@ body {
     letter-spacing: 15px;
 }
 
-.form-container{
+.form-container {
     max-width: 540px;
     margin: 0 auto;
 }
@@ -97,7 +98,7 @@ body {
     align-self: flex-end;
 }
 
-.button__clear{
+.button__clear {
     color: #9495A5;
     font-size: 14px;
     line-height: 14px;
@@ -107,7 +108,8 @@ body {
     transition: color 0.3s ease;
 }
 
-.button__clear:hover, .button__filter:hover {
+.button__clear:hover,
+.button__filter:hover {
     color: #494C6B;
 }
 
@@ -134,11 +136,11 @@ body {
 
 .delete-button {
     background-image: url(../images/icon-cross.svg);
-    width: 18px;
-    height: 18px;
     background-size: contain;
-    border: none;
     background-color: transparent;
+    background-repeat: no-repeat;
+    height: 18px;
+    border: none;
     cursor: pointer;
 }
 
@@ -166,7 +168,7 @@ body {
 .todo-list__checkbox:checked {
     content: url(../images/icon-check.svg);
     padding: 4px;
-    background: linear-gradient(hsl(192, 100%, 67%) ,hsl(280, 87%, 65%));
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
 .todo-list__checkbox:checked~.todo-list__text {
@@ -205,7 +207,7 @@ body.dark-theme .input-field {
 }
 
 body.dark-theme .todo-list__checkbox {
-    border: 1px solid #393A4B; 
+    border: 1px solid #393A4B;
 }
 
 body.dark-theme .todo-list__checkbox:hover {
@@ -213,7 +215,10 @@ body.dark-theme .todo-list__checkbox:hover {
 }
 
 @media screen and (max-width: 640px) {
-    .header__wrapper, .todo-list__form, .todo-list__section {
+
+    .header__wrapper,
+    .todo-list__form,
+    .todo-list__section {
         margin-left: 24px;
         margin-right: 24px;
     }
@@ -222,7 +227,7 @@ body.dark-theme .todo-list__checkbox:hover {
 @media screen and (max-width: 500px) {
 
     .input-field {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .todo-list__item {
@@ -236,5 +241,10 @@ body.dark-theme .todo-list__checkbox:hover {
     .delete-button {
         width: 12px;
         height: 12px;
+    }
+
+    .todo-list__checkbox {
+        height: 20px;
+        width: 20px;
     }
 }

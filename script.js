@@ -2,7 +2,7 @@ const itemsContainer = document.querySelector(".todo-list__container");
 const inputValue = document.querySelector(".input-field");
 const todoListForm = document.querySelector(".todo-list__form");
 const itemsCounter = document.querySelector(".items-counter");
-const toggleTheme = document.querySelector(".toggletheme-button");
+const themeToggler = document.querySelector(".toggletheme-button");
 
 
 const itemsList = ["Discover lost city of gold", "Watch new Netflix series", "Tryout for the Olympics", "Get laughed at at Olympic tryouts", "Practice coding", "Clear my wardrobe"];
@@ -50,8 +50,8 @@ itemsList.forEach(function (item) {
 });
 
 // Toggle button image on click
-toggleTheme.addEventListener("click", function () {
-  toggleTheme.classList.toggle("toggletheme-button_dark");
+themeToggler.addEventListener("click", function () {
+  themeToggler.classList.toggle("toggletheme-button_dark");
 });
 
 // Submit todo list item
@@ -63,7 +63,7 @@ if (localStorage.getItem('theme') === "dark-theme") {
 }
 
 // Listen for a click on the button
-toggleTheme.addEventListener('click', function () {
+themeToggler.addEventListener('click', function () {
   // Then toggle (add/remove) the .dark-theme class to the body
   document.body.classList.toggle('dark-theme');
   localStorage.setItem('theme', document.body.classList);
