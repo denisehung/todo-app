@@ -163,8 +163,10 @@ body {
     cursor: pointer;
 }
 
-.todo-list__checkbox:hover {
-    border: 1px solid violet;
+@media(hover: hover) and (pointer: fine) {
+    .todo-list__checkbox:hover {
+        border: 1px solid violet;
+    }
 }
 
 .todo-list__checkbox:checked {
